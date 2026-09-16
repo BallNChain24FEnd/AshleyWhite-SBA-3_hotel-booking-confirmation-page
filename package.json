@@ -1,0 +1,26 @@
+{
+  "name": "hotel-booking-confirmation-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Hotel booking confirmation page coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./input.css -o ./output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BallNChain24FEnd/AshleyWhite-SBA-3_hotel-booking-confirmation-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BallNChain24FEnd/AshleyWhite-SBA-3_hotel-booking-confirmation-page/issues"
+  },
+  "homepage": "https://github.com/BallNChain24FEnd/AshleyWhite-SBA-3_hotel-booking-confirmation-page#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
