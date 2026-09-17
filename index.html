@@ -2,240 +2,364 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./output.css">
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./output.css" />
   <title>Frontend Mentor | Hotel booking confirmation page</title>
 </head>
 
-<body class="bg-[#fdf8f1] font-['DM_Sans'] text-[#2f2924] antialiased">
+<body class="bg-[#fcf8f3] font-['DM_Sans'] text-[#2f2722] antialiased">
 
-
-  <header class="flex items-center justify-between bg-[#2f2924] px-5 py-4 text-white lg:hidden">
-    <img src="./assets/images/logo.svg" alt="Maison Soleil" class="w-36">
-    <button type="button" aria-label="Open navigation menu"
-      class="rounded-lg p-2 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#f2c85b]">
-      <img src="./assets/images/icon-menu.svg" alt="" class="h-6 w-6">
-    </button>
+  <!-- Mobile header -->
+  <header class="border-b border-[#ded6cc] bg-[#f8f2eb] lg:hidden">
+    <div class="flex items-center justify-between px-4 py-4">
+      <img src="./assets/images/logo.svg" alt="Maison Soleil" class="w-28" />
+      <button type="button" aria-label="Open navigation menu" class="rounded-md border border-[#ded6cc] p-2">
+        <img src="./assets/images/icon-menu.svg" alt="" class="h-6 w-6" />
+      </button>
+    </div>
   </header>
 
-  <div class="min-h-screen lg:grid lg:grid-cols-[280px_1fr]">
+  <div class="min-h-screen lg:grid lg:grid-cols-[260px_1fr]">
 
-    <aside class="hidden bg-[#2f2924] text-white lg:block">
-      <div class="flex min-h-screen flex-col p-8">
-        <img src="./assets/images/logo.svg" alt="Maison Soleil" class="w-44">
+    <!-- Sidebar -->
+    <aside class="hidden border-r border-[#ded6cc] bg-[#f8f2eb] lg:block">
+      <div class="flex min-h-screen flex-col px-4 py-6">
+        <img src="./assets/images/logo.svg" alt="Maison Soleil" class="w-32" />
 
-        <nav aria-label="Guest navigation" class="mt-10">
-          <ul class="space-y-2 text-sm">
-            <li>
-              <a href="#" class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3">
-                <img src="./assets/images/icon-bed.svg" alt="" class="h-5 w-5">
-                <span>Your stay</span>
-                <span class="ml-auto rounded-full bg-[#f2c85b] px-2 py-0.5 text-xs text-[#2f2924]">1</span>
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="flex items-center gap-3 rounded-xl px-3 py-3 text-white/80 hover:bg-white/10 hover:text-white">
-                <img src="./assets/images/icon-house.svg" alt="" class="h-5 w-5">
-                <span>The house</span>
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="flex items-center gap-3 rounded-xl px-3 py-3 text-white/80 hover:bg-white/10 hover:text-white">
-                <img src="./assets/images/icon-pin.svg" alt="" class="h-5 w-5">
-                <span>Around town</span>
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="flex items-center gap-3 rounded-xl px-3 py-3 text-white/80 hover:bg-white/10 hover:text-white">
-                <img src="./assets/images/icon-breakfast.svg" alt="" class="h-5 w-5">
-                <span>Breakfast</span>
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                class="flex items-center gap-3 rounded-xl px-3 py-3 text-white/80 hover:bg-white/10 hover:text-white">
-                <img src="./assets/images/icon-mail.svg" alt="" class="h-5 w-5">
-                <span>Messages</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div class="mt-6 border-t border-[#ded6cc] pt-4">
+          <nav aria-label="Guest navigation">
+            <ul class="space-y-2 text-[15px]">
+              <li>
+                <a href="#" class="flex items-center gap-3 rounded-lg bg-white px-3 py-3">
+                  <img src="./assets/images/icon-bed.svg" alt="" class="h-5 w-5" />
+                  <span>Your stay</span>
+                  <span
+                    class="ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-[#c75b2a] text-xs text-white">1</span>
+                </a>
+              </li>
 
-        <div class="mt-10 border-t border-white/10 pt-6">
-          <div class="flex items-start gap-3">
-            <img src="./assets/images/icon-weather.svg" alt="" class="mt-1 h-6 w-6">
-            <div>
-              <p class="text-xs uppercase tracking-[0.2em] text-white/50">Today in Cassis</p>
-              <div class="mt-1 flex items-end gap-2">
-                <p class="text-3xl font-semibold">27°</p>
-                <p class="pb-1 text-xs text-white/60">Sunny · light breeze</p>
-              </div>
-            </div>
-          </div>
+              <li>
+                <a href="#" class="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-white">
+                  <img src="./assets/images/icon-house.svg" alt="" class="h-5 w-5" />
+                  <span>The house</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-white">
+                  <img src="./assets/images/icon-pin.svg" alt="" class="h-5 w-5" />
+                  <span>Around town</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-white">
+                  <img src="./assets/images/icon-breakfast.svg" alt="" class="h-5 w-5" />
+                  <span>Breakfast</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="flex items-center gap-3 rounded-lg px-3 py-3 hover:bg-white">
+                  <img src="./assets/images/icon-mail.svg" alt="" class="h-5 w-5" />
+                  <span>Messages</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-        <div class="mt-auto pt-10 text-[11px] leading-5 text-white/50">
-          <p>Est. 1987</p>
-          <p>Maison Soleil · 12 Rue des Oliviers · Cassis</p>
-          <p>© 2026 Maison Soleil</p>
+        <div class="mt-auto">
+          <div class="relative overflow-hidden rounded-xl bg-[#efd57b] p-4">
+            <div class="absolute -right-4 -top-5 h-20 w-20 rounded-full bg-[#efbd3e]"></div>
+            <p class="relative font-mono text-[10px] uppercase tracking-[0.2em] text-[#75624f]">Today in Cassis</p>
+            <p class="relative mt-1 font-[Fraunces] text-4xl">27°</p>
+            <p class="relative text-xs text-[#675747]">Sunny · light breeze</p>
+          </div>
+
+          <div
+            class="mt-6 border-t border-dashed border-[#ded6cc] pt-5 font-mono text-[10px] uppercase leading-5 tracking-[0.15em] text-[#918478]">
+            <p>Est. 1987</p>
+            <p class="mt-3">Maison Soleil · 12 Rue des Oliviers · Cassis</p>
+            <p class="mt-3">© 2026 Maison Soleil</p>
+          </div>
         </div>
       </div>
     </aside>
 
-    <main class="min-w-0 bg-[#fdf8f1]">
-      <div class="mx-auto max-w-6xl px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
+    <!-- Main -->
+    <main class="bg-[#fcf8f3]">
+      <div class="mx-auto max-w-[1180px] px-4 py-6 sm:px-6 lg:px-10 lg:py-8">
 
-
-        <section class="flex flex-col gap-6 border-b border-[#ded6cc] pb-8 md:flex-row md:items-end md:justify-between">
+        <!-- Page heading -->
+        <section class="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
           <div>
-            <p class="font-mono text-xs uppercase tracking-[0.18em] text-[#8a7563]">Booking · Confirmed</p>
-            <h1 class="mt-2 font-[Fraunces] text-4xl leading-tight text-[#2f2924] sm:text-5xl">Bienvenue, Lucia.</h1>
+            <p class="font-mono text-xs uppercase tracking-[0.24em] text-[#8e7e70]">Booking · Confirmed</p>
+            <h1 class="mt-2 font-[Fraunces] text-[3rem] leading-none sm:text-[4rem]">
+              Bienvenue, <span class="italic text-[#c75b2a]">Lucia.</span>
+            </h1>
           </div>
 
-          <div class="flex flex-wrap gap-3">
+          <div class="flex gap-3">
             <button type="button"
-              class="rounded-full border border-[#2f2924] px-4 py-2 text-sm font-medium transition hover:bg-[#2f2924] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#2f2924]/30">
+              class="rounded-full border border-[#ded6cc] bg-white px-5 py-2.5 text-sm font-medium transition hover:-translate-y-1 hover:shadow-md">
               Print receipt
             </button>
             <button type="button"
-              class="rounded-full bg-[#2f2924] px-4 py-2 text-sm font-medium text-white transition hover:bg-[#493e35] focus:outline-none focus:ring-2 focus:ring-[#2f2924]/30">
+              class="rounded-full bg-[#2f2722] px-5 py-2.5 text-sm font-medium text-white transition hover:-translate-y-1 hover:shadow-md">
               Add to calendar
             </button>
           </div>
         </section>
 
+        <!-- Desktop fanned cards -->
+        <section class="mt-8 hidden lg:block">
+          <div class="relative min-h-[500px]">
 
-        <section class="mt-10">
-          <div class="relative mx-auto max-w-3xl">
+            <!-- Receipt -->
             <article
-              class="relative z-20 rounded-[2rem] border border-[#ded6cc] bg-white p-6 shadow-[0_18px_45px_rgba(56,44,31,0.10)] sm:p-8">
-              <div
-                class="flex flex-col gap-3 border-b border-dashed border-[#cfc5ba] pb-6 sm:flex-row sm:items-start sm:justify-between">
+              class="absolute left-[8%] top-[2rem] z-10 h-[390px] w-[430px] -rotate-[3deg] rounded-[2rem] bg-white p-7 shadow-[0_18px_40px_rgba(76,61,47,0.12)] transition-all duration-300 ease-out hover:z-30 hover:-translate-x-5 hover:-rotate-[6deg] hover:scale-[1.03]">
+              <div class="flex items-start justify-between">
                 <div>
-                  <p class="font-mono text-xs uppercase tracking-[0.2em] text-[#9a8775]">Receipt</p>
-                  <p class="mt-2 font-mono text-sm text-[#4f463e]">№ MS-2026<br>0421-AH</p>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-[#928577]">Receipt</p>
+                  <h2 class="mt-2 font-[Fraunces] text-2xl">Your stay</h2>
                 </div>
-                <img src="./assets/images/icon-barcode.svg" alt="Booking barcode" class="h-12 w-auto">
-              </div>
-
-              <h2 class="mt-6 font-[Fraunces] text-2xl">Your stay</h2>
-
-              <div class="mt-5 grid gap-4 sm:grid-cols-2">
-                <div class="rounded-2xl bg-[#faf5ee] p-4">
-                  <p class="text-xs uppercase tracking-[0.15em] text-[#8a7563]">Check in</p>
-                  <p class="mt-1 font-[Fraunces] text-3xl">25 Apr</p>
-                  <p class="text-sm text-[#6f6256]">Saturday · 15:00</p>
-                </div>
-                <div class="rounded-2xl bg-[#faf5ee] p-4">
-                  <p class="text-xs uppercase tracking-[0.15em] text-[#8a7563]">Check out</p>
-                  <p class="mt-1 font-[Fraunces] text-3xl">29 Apr</p>
-                  <p class="text-sm text-[#6f6256]">Wednesday · 11:00</p>
+                <div class="text-right font-mono text-[10px] leading-5 tracking-[0.15em] text-[#857768]">
+                  <p>№ MS-2026</p>
+                  <p>0421-AH</p>
                 </div>
               </div>
 
-              <div class="mt-6 space-y-3 text-sm">
-                <div class="flex justify-between gap-4"><span>Room · La Garrigue · 4 nights</span><span
-                    class="font-medium">€ 620.00</span></div>
-                <div class="flex justify-between gap-4"><span>Breakfast · 2 guests</span><span class="font-medium">€
-                    96.00</span></div>
-                <div class="flex justify-between gap-4"><span>Tourist tax</span><span class="font-medium">€ 14.40</span>
-                </div>
-              </div>
-
-              <div class="mt-6 flex items-end justify-between border-t border-dashed border-[#cfc5ba] pt-5">
+              <div class="mt-5 grid grid-cols-2 border-t border-dashed border-[#ded6cc] pt-5">
                 <div>
-                  <p class="text-xs uppercase tracking-[0.15em] text-[#8a7563]">Total paid</p>
-                  <p class="mt-1 font-[Fraunces] text-3xl">€ 730.40</p>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-[#918478]">Check in</p>
+                  <p class="mt-2 font-[Fraunces] text-[2.8rem] leading-none">25 Apr</p>
+                  <p class="mt-1 text-xs text-[#746659]">Saturday · 15:00</p>
                 </div>
-                <p class="font-mono text-xs text-[#6f6256]">Paid · Wise · GBP</p>
+
+                <div>
+                  <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-[#918478]">Check out</p>
+                  <p class="mt-2 font-[Fraunces] text-[2.8rem] leading-none">29 Apr</p>
+                  <p class="mt-1 text-xs text-[#746659]">Wednesday · 11:00</p>
+                </div>
+              </div>
+
+              <div class="mt-5 border-t border-dashed border-[#ded6cc] pt-4 text-sm">
+                <div class="flex justify-between py-1"><span>Room · La Garrigue × 4 nights</span><span>€ 620.00</span>
+                </div>
+                <div class="flex justify-between py-1"><span>Breakfast × 2 guests</span><span>€ 96.00</span></div>
+                <div class="flex justify-between py-1"><span>Tourist tax</span><span>€ 14.40</span></div>
+              </div>
+
+              <div class="mt-4 border-t border-[#746659] pt-4">
+                <div class="flex items-end justify-between">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-[#918478]">Total paid</p>
+                  <p class="font-[Fraunces] text-[2.7rem] leading-none">€ 730.40</p>
+                </div>
+
+                <div class="mt-4 flex items-end justify-between">
+                  <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-[#918478]">Paid · Wise · GBP</p>
+                  <img src="./assets/images/icon-barcode.svg" alt="Booking barcode" class="h-8 w-auto" />
+                </div>
               </div>
             </article>
-          </div>
-        </section>
 
+            <!-- Center sun -->
+            <div class="absolute left-1/2 top-[9rem] z-0 -translate-x-1/2">
+              <img src="./assets/images/illustration-sun.svg" alt="" class="h-24 w-24" />
+            </div>
 
-        <section class="mt-8">
-          <div class="relative mx-auto max-w-3xl">
+            <!-- Host card -->
             <article
-              class="rounded-[2rem] bg-[#b84d31] p-6 text-[#fff8ef] shadow-[0_18px_45px_rgba(56,44,31,0.10)] sm:p-8 lg:-mt-6 lg:ml-14 lg:rotate-[1.5deg]">
-              <p class="font-mono text-xs uppercase tracking-[0.2em] text-white/70">Welcome</p>
-              <h2 class="mt-2 font-[Fraunces] text-3xl">A note from your host, Margaux.</h2>
-              <p class="mt-4 max-w-2xl font-[Fraunces] text-lg leading-8 italic text-white/90">
-                We're so glad you're coming. The shutters will be open, the lemonade cold,
-                and the cat — Poivre — pretending not to notice you.
+              class="absolute right-[8%] top-[2rem] z-20 h-[390px] w-[430px] rotate-[2deg] rounded-[2rem] bg-gradient-to-br from-[#dd7139] to-[#ad4322] p-7 text-white shadow-[0_18px_40px_rgba(151,83,44,0.20)] transition-all duration-300 ease-out hover:z-30 hover:translate-x-5 hover:rotate-[5deg] hover:scale-[1.03]">
+              <div class="flex items-start justify-between">
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-white/75">Welcome card</p>
+                <img src="./assets/images/icon-sun.svg" alt="" class="h-9 w-9" />
+              </div>
+
+              <p class="mt-8 font-[Fraunces] text-xl italic text-[#f5d76c]">A note from your host,</p>
+              <h2 class="mt-1 font-[Fraunces] text-[3.3rem] italic leading-none">Margaux.</h2>
+
+              <p class="mt-6 text-base leading-7 text-white/95">
+                We're so glad you're coming. The shutters will be open,
+                the lemonade cold, and the cat - Poivre - pretending not to notice you.
               </p>
-              <div class="mt-6 flex items-center gap-3 border-t border-white/20 pt-4 text-sm">
-                <span class="text-white/70">Room</span>
-                <strong>La Garrigue</strong>
+
+              <div class="mt-10">
+                <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/70">Room</p>
+                <p class="mt-1 font-[Fraunces] text-2xl">La Garrigue</p>
               </div>
             </article>
+
+            <p
+              class="absolute bottom-4 left-1/2 z-40 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.22em] text-[#b75b34]">
+              ✦ Hover to fan ✦
+            </p>
           </div>
         </section>
 
+        <!-- Mobile host + receipt -->
+        <section class="mt-8 space-y-6 lg:hidden">
 
-        <section class="mt-12 grid gap-4 lg:grid-cols-3">
-          <article class="rounded-[1.75rem] border border-[#ded6cc] bg-white p-6">
-            <div class="flex items-center justify-between">
-              <img src="./assets/images/icon-key.svg" alt="" class="h-6 w-6">
-              <span class="font-mono text-xs text-[#9a8775]">01</span>
+          <article
+            class="rounded-[2rem] bg-gradient-to-br from-[#dd7139] to-[#ad4322] p-6 text-white shadow-[0_18px_35px_rgba(151,83,44,0.18)] transition duration-300 hover:-translate-y-2">
+            <div class="flex justify-between">
+              <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-white/75">Welcome card</p>
+              <img src="./assets/images/icon-sun.svg" alt="" class="h-9 w-9" />
             </div>
-            <h2 class="mt-5 font-[Fraunces] text-2xl">Arrival</h2>
-            <p class="mt-3 font-medium">Check-in from 15:00</p>
-            <p class="text-sm text-[#6f6256]">Sat, 25 April</p>
-            <p class="mt-4 text-sm leading-6 text-[#6f6256]">
-              Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the
-              olive tree.
+
+            <p class="mt-10 font-[Fraunces] text-2xl italic text-[#f5d76c]">A note from your host,</p>
+            <h2 class="mt-1 font-[Fraunces] text-[3.2rem] italic leading-none">Margaux.</h2>
+
+            <p class="mt-7 text-base leading-7">
+              We're so glad you're coming. The shutters will be open,
+              the lemonade cold, and the cat - Poivre - pretending not to notice you.
+            </p>
+
+            <div class="mt-10">
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/70">Room</p>
+              <p class="mt-1 font-[Fraunces] text-2xl">La Garrigue</p>
+            </div>
+          </article>
+
+          <article
+            class="rounded-[2rem] bg-white p-6 shadow-[0_18px_35px_rgba(76,61,47,0.10)] transition duration-300 hover:-translate-y-2">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-[#928577]">Receipt</p>
+                <h2 class="mt-2 font-[Fraunces] text-2xl">Your stay</h2>
+              </div>
+              <div class="text-right font-mono text-[10px] leading-5 tracking-[0.15em] text-[#857768]">
+                <p>№ MS-2026</p>
+                <p>0421-AH</p>
+              </div>
+            </div>
+
+            <div class="mt-5 grid grid-cols-2 border-t border-dashed border-[#ded6cc] pt-5">
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-[#918478]">Check in</p>
+                <p class="mt-2 font-[Fraunces] text-4xl">25 Apr</p>
+                <p class="mt-1 text-xs text-[#746659]">Saturday · 15:00</p>
+              </div>
+
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-[#918478]">Check out</p>
+                <p class="mt-2 font-[Fraunces] text-4xl">29 Apr</p>
+                <p class="mt-1 text-xs text-[#746659]">Wednesday · 11:00</p>
+              </div>
+            </div>
+
+            <div class="mt-5 border-t border-dashed border-[#ded6cc] pt-4 text-sm">
+              <div class="flex justify-between py-1"><span>Room · La Garrigue × 4 nights</span><span>€ 620.00</span>
+              </div>
+              <div class="flex justify-between py-1"><span>Breakfast × 2 guests</span><span>€ 96.00</span></div>
+              <div class="flex justify-between py-1"><span>Tourist tax</span><span>€ 14.40</span></div>
+            </div>
+
+            <div class="mt-4 border-t border-[#746659] pt-4">
+              <div class="flex items-end justify-between">
+                <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-[#918478]">Total paid</p>
+                <p class="font-[Fraunces] text-4xl">€ 730.40</p>
+              </div>
+
+              <div class="mt-4 flex items-end justify-between">
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-[#918478]">Paid · Wise · GBP</p>
+                <img src="./assets/images/icon-barcode.svg" alt="Booking barcode" class="h-8 w-auto" />
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- Guest cards -->
+        <section class="mt-8 grid gap-4 lg:grid-cols-3">
+
+          <!-- Arrival -->
+          <article
+            class="rounded-[1.7rem] border border-[#ded6cc] bg-white p-5 shadow-[0_10px_22px_rgba(76,61,47,0.05)] transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_18px_35px_rgba(199,91,42,0.18)]">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#c75b2a]">
+                  <img src="./assets/images/icon-key.svg" alt="" class="h-5 w-5" />
+                </div>
+                <p class="font-mono text-sm uppercase tracking-[0.24em] text-[#c75b2a]">Arrival</p>
+              </div>
+              <span class="font-[Fraunces] text-[2.4rem] leading-none text-[#c75b2a]">01</span>
+            </div>
+
+            <h3 class="mt-7 font-[Fraunces] text-[2rem] leading-tight">Check-in from 15:00</h3>
+            <p class="mt-2 text-xs text-[#76685b]">Sat, 25 April</p>
+
+            <p class="mt-4 text-sm leading-6 text-[#5f5247]">
+              Ring the brass bell by the blue door. If we're at the market,
+              the key is in the terracotta pot by the olive tree.
             </p>
           </article>
 
-          <article class="rounded-[1.75rem] border border-[#ded6cc] bg-white p-6">
-            <div class="flex items-center justify-between">
-              <img src="./assets/images/icon-wifi.svg" alt="" class="h-6 w-6">
-              <span class="font-mono text-xs text-[#9a8775]">02</span>
+          <!-- WiFi -->
+          <article
+            class="rounded-[1.7rem] border border-[#ded6cc] bg-white p-5 shadow-[0_10px_22px_rgba(76,61,47,0.05)] transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_18px_35px_rgba(93,102,214,0.18)]">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#5d66d6]">
+                  <img src="./assets/images/icon-wifi.svg" alt="" class="h-5 w-5" />
+                </div>
+                <p class="font-mono text-sm uppercase tracking-[0.24em] text-[#5d66d6]">Wifi</p>
+              </div>
+              <span class="font-[Fraunces] text-[2.4rem] leading-none text-[#5d66d6]">02</span>
             </div>
-            <h2 class="mt-5 font-[Fraunces] text-2xl">Wifi</h2>
-            <p class="mt-3 font-medium">Le Soleil · Guest</p>
-            <p class="text-sm text-[#6f6256]">Password below</p>
-            <div class="mt-5 rounded-2xl bg-[#faf5ee] p-4">
-              <p class="text-xs uppercase tracking-[0.15em] text-[#8a7563]">Network</p>
-              <p class="mt-1 text-sm font-medium">Le Soleil · Guest</p>
-              <p class="mt-4 text-xs uppercase tracking-[0.15em] text-[#8a7563]">Password</p>
-              <div class="mt-1 flex items-center justify-between gap-4">
-                <code class="font-mono text-sm">soleil-2026</code>
-                <button type="button"
-                  class="rounded-full border border-[#2f2924] px-3 py-1 text-xs hover:bg-[#2f2924] hover:text-white">Copy</button>
+
+            <h3 class="mt-7 font-[Fraunces] text-[2rem] leading-tight">Le Soleil · Guest</h3>
+            <p class="mt-2 text-xs text-[#76685b]">Password below</p>
+
+            <div class="mt-4 space-y-3 rounded-xl bg-[#f6f1eb] p-3">
+              <div class="flex justify-between">
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-[#918478]">Network</span>
+                <span class="text-xs">Le Soleil · Guest</span>
+              </div>
+
+              <div class="flex justify-between">
+                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-[#918478]">Password</span>
+                <div class="flex items-center gap-2">
+                  <code class="text-xs">soleil-2026</code>
+                  <button type="button"
+                    class="rounded-full border border-[#ded6cc] bg-white px-2 py-1 text-[9px] uppercase tracking-[0.14em]">Copy</button>
+                </div>
               </div>
             </div>
           </article>
 
-          <article class="rounded-[1.75rem] border border-[#ded6cc] bg-white p-6">
-            <div class="flex items-center justify-between">
-              <img src="./assets/images/icon-breakfast-outline.svg" alt="" class="h-6 w-6">
-              <span class="font-mono text-xs text-[#9a8775]">03</span>
+          <!-- Breakfast -->
+          <article
+            class="rounded-[1.7rem] border border-[#ded6cc] bg-white p-5 shadow-[0_10px_22px_rgba(76,61,47,0.05)] transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_18px_35px_rgba(207,90,141,0.18)]">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#cf5a8d]">
+                  <img src="./assets/images/icon-breakfast-outline.svg" alt="" class="h-5 w-5" />
+                </div>
+                <p class="font-mono text-sm uppercase tracking-[0.24em] text-[#cf5a8d]">Breakfast</p>
+              </div>
+              <span class="font-[Fraunces] text-[2.4rem] leading-none text-[#cf5a8d]">03</span>
             </div>
-            <h2 class="mt-5 font-[Fraunces] text-2xl">Breakfast</h2>
-            <p class="mt-3 font-medium">Served 8 – 10:30</p>
-            <p class="text-sm text-[#6f6256]">On the terrace</p>
-            <p class="mt-4 text-sm leading-6 text-[#6f6256]">
-              Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night
-              before.
+
+            <h3 class="mt-7 font-[Fraunces] text-[2rem] leading-tight">Served 8 – 10:30</h3>
+            <p class="mt-2 text-xs text-[#76685b]">On the terrace</p>
+
+            <p class="mt-4 text-sm leading-6 text-[#5f5247]">
+              Fresh figs, Marseille honey, pain au levain, and espresso.
+              Gluten-free option? Leave a note the night before.
             </p>
           </article>
-        </section>
 
+        </section>
       </div>
     </main>
-
   </div>
 
 </body>
